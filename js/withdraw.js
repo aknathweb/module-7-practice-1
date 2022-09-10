@@ -1,3 +1,5 @@
+/*   check withdraw js file linkup successfull or not */
+console.log("withdraw js file linked");
 /* 
 1. add withdraw button event handler
 2. get withdraw amount by using getInputFieldValueById function
@@ -10,6 +12,9 @@
 */
 
 document.getElementById("btn-withdraw").addEventListener("click", function () {
+  /*   check click event work or not */
+  console.log("withdraw button click event work fine");
+
   const newWithdrawAmount = getInputFieldValueById("withdraw-field");
   const previousWithdrawTotal = getTextElementValueById("withdraw-total ");
   const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
