@@ -17,10 +17,6 @@ function getTextElementValueById(elementId) {
 }
 
 function setTextElementValueById(elementId, newValue) {
-  if (isNaN(newValue) || newValue < 0) {
-    alert("Give positive value as input");
-    return;
-  }
 
   const textElement = document.getElementById(elementId);
   ///fix text field value update. so,it will be innerText

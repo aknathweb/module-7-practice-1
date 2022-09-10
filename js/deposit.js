@@ -9,7 +9,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   /* newDepositAmount ok */
   const newDepositAmount = getInputFieldValueById("deposit-field");
   /* set alert for avoid negative and not number input */
-  if (isNaN(newDepositAmount) || newDepositAmount < 0) {
+  if (isNaN(newDepositAmount) || newDepositAmount < 1) {
     alert("Give positive value as input");
     return;
   }
@@ -22,7 +22,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
   // set deposit total value
   /* fixed the decimal point value 2 */
-  setTextElementValueById("deposit-total", newDepositTotal.toFixed(2));
+  setTextElementValueById("deposit-total", parseFloat(newDepositTotal.toFixed(2)));
 
   // get previous balance by using the function
   ///bug fix wrong function name
@@ -30,7 +30,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   /* Automatic Type Conversion use because multiply value covert to number */
   const newBalanceTotal = previousBalanceTotal * 1 + newDepositAmount * 1;
   /* fixed the decimal point value 2 */
-  setTextElementValueById("balance-total", newBalanceTotal.toFixed(2));
+  setTextElementValueById("balance-total", parseFloat(newBalanceTotal.toFixed(2)));
 });
 
 /* done deposit all problems */
